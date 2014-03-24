@@ -1,0 +1,13 @@
+extends layout
+block content
+    table.table.table-striped
+        thead
+            tr
+                th Number
+                th Status
+                th Name
+        each card in results
+            tr(data-card_num=card.number[0], class="card_num")
+                td= card.number[0]
+                td= card.status[0]
+                td.description-cell= card.name[0]

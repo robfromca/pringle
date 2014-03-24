@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+
+      script(src="/javascripts/jquery-2.1.0.min.js")
+
+      script(src="/bootstrap/js/bootstrap.js")
+      script(src="/javascripts/main.js")
+      link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+      link(rel='stylesheet', href='/stylesheets/style.css')
+      meta(charset="utf-8")
+    body
+        nav.navbar-wrapper.navbar-inverse.navbar-fixed-top(role="navigation")
+            .container
+                .navbar-header
+                    a.navbar-brand Mobile Web
+                .collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li
+                            a(href="/items") Work queue
+        .container
+            block content

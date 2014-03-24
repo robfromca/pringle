@@ -1,0 +1,5 @@
+Mingle:
+  username: username
+  password: password
+  mingleserver: hostname
+  projectname: mingle_project
