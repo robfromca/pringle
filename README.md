@@ -9,7 +9,7 @@ Install node and npm.
 
 Run "npm update"
 
-Copy the config/default.yml file to your local hostname.yml
+Copy the config/default.js file to your local hostname.js
 
 Edit it to be appropriate.
 
