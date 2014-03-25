@@ -53,7 +53,11 @@ function getCard(cardNumber, e){
                 class: 'alert alert-info',
                 id: 'activeIssue',
                 html: data.card.description[0]
+            }).on('click', function(e) {
+                $('#activeIssue').remove();
+                e.stopImmediatePropagation();
             }).appendTo($(this));
+
         }
         scrollElementToMiddle($("#activeIssue"));
     }).fail(function() {
