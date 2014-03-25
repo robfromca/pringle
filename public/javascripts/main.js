@@ -10,6 +10,22 @@ function addAlertTo(element) {
     }).appendTo(element);
 }
 
+function scrollElementToMiddle(el) {
+    var elOffset = el.offset().top;
+    var elHeight = el.height();
+    var windowHeight = $(window).height();
+    var offset;
+
+    if (elHeight < windowHeight) {
+        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+    }
+    else {
+        offset = elOffset;
+    }
+    var scrollSpeed = 700;
+    $('html, body').animate({scrollTop:offset}, scrollSpeed);
+}
+
 function getCard(cardNumber, e){
     console.log('CardNumber=' + cardNumber);
     $('<div/>', {
@@ -39,6 +55,7 @@ function getCard(cardNumber, e){
                 html: data.card.description[0]
             }).appendTo($(this));
         }
+        scrollElementToMiddle($("#activeIssue"));
     }).fail(function() {
         $('#activeIssue').remove();
         $('#loading').remove();
@@ -57,7 +74,6 @@ $(function(){
 
         getCard($(e.target).closest('tr').data("card_num"),
             $(e.target).closest('tr').children('.description-cell'));
-
     });
 });
 
