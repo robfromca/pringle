@@ -67,6 +67,11 @@ function getCard(cardNumber, e){
     });
 };
 
+$(function(){
+    $('#sync').on('click', function(e) {
+        window.location = '/sync'
+     })
+});
 
 $(function(){
     $('.card_num').on('click', function(e) {

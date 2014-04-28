@@ -1,0 +1,14 @@
+extends layout
+block content
+    table.table.table-striped
+        thead
+            tr
+                th Number
+                th Status
+                th Name
+        each issue in issues
+            tr(data-issue_num=issue.number, class="issue_num")
+                td= issue.number
+                td= issue.state
+                td.description-cell= issue.title
+
